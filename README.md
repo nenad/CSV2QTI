@@ -22,6 +22,8 @@ Basic usage
 
 `CSV2QTI geography.csv geography Geography_Basic`
 
+This will output a `geography.zip` file which can be imported in TAO as QTI Package
+
 Usage with `tab` set as delimiter and `"` as quote character
 
 `CSV2QTI geography.csv geography Geography_Basic --delimiter='\t' --quotechar='"'`
