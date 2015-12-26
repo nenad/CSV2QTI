@@ -20,8 +20,8 @@ See the full documentation with `-h` flag.
 
 Basic usage
 
-`CSV2QTI geography.csv geography Geography_Basic'
+`CSV2QTI geography.csv geography Geography_Basic`
 
 Usage with `tab` set as delimiter and `"` as quote character
 
-`CSV2QTI geography.csv geography Geography_Basic --delimiter='\t' --quotechar='"''
+`CSV2QTI geography.csv geography Geography_Basic --delimiter='\t' --quotechar='"'`
