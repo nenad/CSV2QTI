@@ -2,3 +2,5 @@
 build/
 dist/
 CSV2QTI.spec
+*.sublime-project
+*.sublime-workspace

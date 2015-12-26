@@ -17,7 +17,7 @@ parser.add_argument('--delimiter', metavar='delimiter', default=',', help='Delim
 parser.add_argument('--quotechar', metavar='quotechar', default='"', help='Quote character for the csv file')
 
 args = parser.parse_args()
-questions = CSVImporter().getQuestions(args.csv)
+questions = CSVImporter(args.delimiter, args.quotechar).getQuestions(args.csv)
 
 if not os.path.exists(args.output):
 	os.makedirs(args.output)
@@ -30,7 +30,6 @@ for i in range(0, len(questions)):
 	questions[i].title_id = questions[i].title.lower()
 	xmlGenerator.saveXML(questions[i], args.output + '/' + args.output + '/' + questions[i].title + '.xml')
 xmlGenerator.generateManifest(args.output, args.prefix + "_pack")
-
+print "%d items generated!" % len(questions)
 shutil.make_archive(args.output, 'zip', args.output)
-
 shutil.rmtree(args.output, ignore_errors=True)

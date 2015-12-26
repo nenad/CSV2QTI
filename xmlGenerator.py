@@ -5,7 +5,7 @@ import os
 
 def saveXML(question, filename):
 	doc, tag, text = Doc().tagtext();
-	question.correct_answer = 'A' + question.correct_answer.__str__()
+	question.correct_answer = 'A' + question.correct_answer
 	doc.asis('<?xml version="1.0" encoding="UTF-8"?>'\
 		'<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p0"'\
 		' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"'\
