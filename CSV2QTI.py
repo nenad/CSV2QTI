@@ -12,7 +12,7 @@ Example: "What is opposite of yes?", "2", "Maybe", "Yes", "Never"
 """)
 parser.add_argument('csv', metavar='csv', help='csv file to be converted')
 parser.add_argument('output', metavar='output', help='Export filename')
-parser.add_argument('prefix', metavar='prefix', help='Prefix for xml files (ex. IT_General_Knowledge')
+parser.add_argument('prefix', metavar='prefix', help='Prefix for xml files (ex. IT_General_Knowledge)')
 parser.add_argument('--delimiter', metavar='delimiter', default=',', help='Delimiter for the csv file')
 parser.add_argument('--quotechar', metavar='quotechar', default='"', help='Quote character for the csv file')
 
