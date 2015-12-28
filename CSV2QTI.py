@@ -8,7 +8,7 @@ parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpForm
 description=
 """Create zip with xml which are ready to be imported in TAO
 CSV Structure is: question, correct_answer_index, answers_separated_by_delimiter...
-Example: "What is opposite of yes?", "2", "Maybe", "Yes", "Never"
+Example: "What is opposite of yes?","2","Maybe","Yes","Never"
 """)
 parser.add_argument('csv', metavar='csv', help='csv file to be converted')
 parser.add_argument('output', metavar='output', help='Export filename')
