@@ -21,6 +21,8 @@ class CSVImporter:
 				question.question = row[0]
 				question.correct_answer = row[1]
 				for i in range(2, len(row)):
+					if not row[i]:
+						continue
 					question.answers.append(row[i]);
 				questions.append(question)
 		return questions
