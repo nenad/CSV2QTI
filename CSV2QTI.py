@@ -15,6 +15,7 @@ parser.add_argument('output', metavar='output', help='Export filename')
 parser.add_argument('prefix', metavar='prefix', help='Prefix for xml files (ex. IT_General_Knowledge)')
 parser.add_argument('--delimiter', metavar='delimiter', default=',', help='Delimiter for the csv file')
 parser.add_argument('--quotechar', metavar='quotechar', default='"', help='Quote character for the csv file')
+parser.add_argument('--startingNumber', metavar='startingNumber', default='0', help='Which number should the numbering start')
 
 args = parser.parse_args()
 questions = CSVImporter(args.delimiter, args.quotechar).getQuestions(args.csv)
@@ -26,7 +27,7 @@ if not os.path.exists(args.output + '/' + args.output):
 
 for i in range(0, len(questions)):
 	item_id = '%03d' % i
-	questions[i].title = args.prefix + "_" + item_id
+	questions[i].title = args.prefix + "_" + item_id + args.startingNumber
 	questions[i].title_id = questions[i].title.lower()
 	xmlGenerator.saveXML(questions[i], args.output + '/' + args.output + '/' + questions[i].title + '.xml')
 xmlGenerator.generateManifest(args.output, args.prefix + "_pack")
