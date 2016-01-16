@@ -26,8 +26,8 @@ if not os.path.exists(args.output + '/' + args.output):
 	os.makedirs(args.output + '/' + args.output)
 
 for i in range(0, len(questions)):
-	item_id = '%03d' % i
-	questions[i].title = args.prefix + "_" + item_id + args.startingNumber
+	item_id = '%03d' % (i + args.startingNumber)
+	questions[i].title = args.prefix + "_" + item_id
 	questions[i].title_id = questions[i].title.lower()
 	xmlGenerator.saveXML(questions[i], args.output + '/' + args.output + '/' + questions[i].title + '.xml')
 xmlGenerator.generateManifest(args.output, args.prefix + "_pack")
