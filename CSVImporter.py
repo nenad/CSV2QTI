@@ -12,7 +12,7 @@ class CSVImporter:
 
 	def getQuestions(self, question_file):
 		questions = []
-		with open(question_file, 'rb') as csvfile:
+		with open(question_file, 'r') as csvfile:
 			reader = csv.reader(csvfile, delimiter=self.delimiter, quotechar=self.quotechar)
 			for row in reader:
 				if (len(row) < 4):
